@@ -1,0 +1,6 @@
+with open("tt2.py") as f:
+    with open("a.txt", "w") as f1:
+        for line in f:
+             li=line.strip()
+             if not li.startswith("#"):
+                    f1.write(line)

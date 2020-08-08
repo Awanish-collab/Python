@@ -1,0 +1,13 @@
+import re
+while True:
+    input_str = input("Enter any String from a-z : ")
+    if not re.match("^[a-z]*$", input_str):
+        print("Error! Only letters a-z allowed!")
+    else:
+        #print("ok")
+        if len(input_str) % 2 == 0:
+            print("Empty String")
+            break
+        else:
+            print(input_str[-1])
+            break

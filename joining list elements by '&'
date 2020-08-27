@@ -1,0 +1,5 @@
+import ast,sys
+input_str = (sys.stdin.read()).split(',')
+seperator = ' & '
+string_1 = seperator.join(input_str)#Type your answer here
+print(string_1)

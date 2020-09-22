@@ -1,0 +1,4 @@
+input_list = ['Santa Cruz','Santa fe','Mumbai','Delhi']
+count = sum(map(lambda x: x.startswith('S'), input_list))          #Type your code here
+
+print(count)

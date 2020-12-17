@@ -1,0 +1,25 @@
+sides = [5 ,4, 2, 1, 4 ,5]
+#  all elemets of sides list represent the length of brics.
+tower=[]
+
+while sides: #while sides is not empty
+    if sides[0]>=sides[-1]:
+        tower.append(int(sides[0]))
+        sides.pop()
+    else:
+        tower.append(int(sides[-1]))
+        sides.pop(-1)
+
+# we check if all the elements are in descending order in tower , if all reamining elements in descending order then
+# we can easiley stack from left otherwise it will not stacked becoz length of bricks will be in random order. 
+# if it will be in the descending order then flag will be 1 otherwise it will be zero.
+flag=1
+print(tower)
+for i in range(len(tower)-2):
+    if tower[i]<tower[i+1]:
+        flag=0
+        break
+if(flag==1):
+    print('Possible')
+else:
+    print('Impossible')

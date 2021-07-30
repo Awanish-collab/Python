@@ -1,0 +1,41 @@
+''''
+Write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Basketball","Chess"].
+
+Hint : Get the subject, verb, object from user and convert into list
+
+Input 
+
+Enter the subject :  I You
+
+Enter the verb:  Play Love
+
+Enter the object:   Basketball Chess
+
+Output
+
+I Play Basketball
+
+I Play Chess
+
+I Love Basketball
+
+I Love Chess
+
+You Play Basketball
+
+You Play Chess
+
+You Love Basketball
+
+You Love Chess
+
+'''
+
+a = input('Enter the subject : ').split()
+b = input('Enter the verb : ').split()
+c = input('Enter the object : ').split()
+#print(a)
+for i in a:
+    for j in b:
+        for k in c:
+            print(i,j,k)

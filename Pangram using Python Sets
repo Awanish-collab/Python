@@ -1,0 +1,42 @@
+'''
+  Write a Python program to check whether an input string is a pangram or not. 
+  Pangrams are words or sentences containing every letter of the alphabet at least once.
+  Ignore the case of the characters. Use Set to implement the program.
+  If the input string is a Pangram, the output should be: Yes, the string is a pangram.
+  If the string is not a Pangram, it should report the missing letters, in lowercase, in ORDER.  See the Examples below.
+'''
+
+
+
+import string
+
+alphabet = set(string.ascii_lowercase) 
+  
+def ispangram(s):
+    l1 = []
+    for char in alphabet:
+        if char not in s:
+            l1.append(char)
+            
+    #print(l1)
+    l2 = sorted(l1)
+    if len(l2) > 0:
+        last_char = l2[-1]
+    if len(l2) == 0:
+        print('Yes, the string is a pangram.')
+    else:
+        print('No, the string is NOT a pangram. Missing letter(s) is(are) ',end='')
+        for i in l2:
+            if i == last_char:
+                print(i+'.')
+            else:
+                print(i,end=', ')
+
+def main():
+    s = input()
+    s = s.lower()
+    ispangram(s)
+
+if __name__ == "__main__":
+    # Call the main function
+    main()

@@ -1,0 +1,34 @@
+''' 
+
+  Write a program to print the frequency of characters in a string in the given format.
+  
+  EXAMPLES:
+
+  Input: www.google.com
+  Output: w:3, .:2, g:2, o:3, l:1, e:1, c:1, m:1
+
+  Input: abbac
+  Outpt: a:2, b:2, c:1
+  
+'''
+
+def main():
+    s=input()
+    l1 = []
+    for i in s:
+        if i not in l1:
+            l1.append(i)
+        
+    for i in l1:
+        char_count = s.count(i)
+        if i == l1[-1]:
+            print(str(i)+':'+str(char_count))
+        else:
+            print(str(i)+':'+str(char_count),end=', ')
+                
+
+	#the following lines are provided to print the output in the appropriate format
+	
+if __name__ == "__main__":
+    # Call the main function
+    main()
